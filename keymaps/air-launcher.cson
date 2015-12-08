@@ -8,4 +8,5 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 'atom-workspace':
-  'ctrl-alt-o': 'air-launcher:toggle'
+  'ctrl-f12': 'air-launcher:run-last'
+  'ctrl-shift-f12': 'air-launcher:run'

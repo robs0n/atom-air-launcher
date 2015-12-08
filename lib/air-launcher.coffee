@@ -20,7 +20,6 @@ searchPath = (dirpath) ->
           else
             doc = new xmldom().parseFromString data
             name = xpath.select("/node()[local-name() = 'application']/node()[local-name() = 'name']/text()", doc).toString()
-            console.log 'NAME', name
             resolve name:name, descriptor:appdescr
 
 module.exports = AirLauncher =
@@ -28,7 +27,6 @@ module.exports = AirLauncher =
   modalPanel: null
   subscriptions: null
   apps: null
-  lastApp: null
   searchPromise: null
 
   activate: (state) ->
@@ -67,4 +65,11 @@ module.exports = AirLauncher =
         console.error 'REJECTED', err
 
   runLast: ->
-    console.log 'Run LASTTTSTSTS'
+    @airLauncherView.startLast()
+
+module.exports.config =
+  sdkPath:
+      title: 'Adobe AIR SDK Path'
+      description: 'Path to your Adobe AIR SDK'
+      type: 'string'
+      default: ''

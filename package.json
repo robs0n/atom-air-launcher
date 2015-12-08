@@ -1,0 +1,26 @@
+{
+  "name": "air-launcher",
+  "main": "./lib/air-launcher",
+  "version": "0.1.0",
+  "description": "Launch Adobe Air applications from atom",
+  "keywords": [
+    "launcher",
+    "air"
+  ],
+  "activationCommands": {
+    "atom-workspace": [
+      "air-launcher:run",
+      "air-launcher:run-last"
+    ]
+  },
+  "repository": "https://github.com/atom/air-launcher",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.1.0",
+    "xmldom": "^0.1.19",
+    "xpath": "0.0.9"
+  }
+}

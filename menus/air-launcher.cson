@@ -1,0 +1,30 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Start App from Workspace'
+      'command': 'air-launcher:run'
+    },
+    {
+      'label': 'Start App from last Run'
+      'command': 'air-launcher:run-last'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'AirLauncher'
+      'submenu': [
+        {
+          'label': 'Start App from Workspace'
+          'command': 'air-launcher:run'
+        },
+        {
+          'label': 'Start App from last Run'
+          'command': 'air-launcher:run-last'
+        }
+      ]
+    ]
+  }
+]
